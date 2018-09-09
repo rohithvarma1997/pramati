@@ -36,7 +36,7 @@
      - Max Amount-15,00,000/-
      - Min Amount-No limit
      - Min investment time-5 Years
-10. **Senior Citizen's Savings Scheme**
-     - Max Amount-15,00,000/-
+10. **National Pensions System**
+     - Max Amount-No limit
      - Min Amount-No limit
-     - Min investment time-5 Years
+     - Min investment time-No limit (Until age 60)
