@@ -37,15 +37,13 @@
  	
 **Positives**
 - Challenging.
-- Swift Hiring process.
-- Logic is properely analyzed .
-- Gave chances to express ourselves .
+- Logic is properely analyzed.
 - Good Pre-Placement talks.
 - Making the students Comfortable.
  
 **Negatives**
 - Mathematical questions are tough.
-- Completed in a single day hence tiring.
+- Completed in a single day and hence tiring.
 
 **Suggestions**
 - Time Complexity Constraints can be added in HackerRank.
