@@ -50,8 +50,8 @@
             
 **What was in Interviewer’s mind while taking interview?**
 - Analyzing presence of mind 
-- Scalality of the Programs.
-- Attidude and wllingness to learn.
+- Scalablity of the Programs.
+- Attitude and willingness to learn.
 - Analytical Skills 
 - Logic and ability to explain project 
 - Technical logic 
@@ -59,7 +59,6 @@
 - How interest originated in candidate.
 
 **What was in candidate’s mind while giving interview?**
-- Apart from technical questions asked questions on projects
 - Why questions has been stressed more on Mathematics ?
 
 
