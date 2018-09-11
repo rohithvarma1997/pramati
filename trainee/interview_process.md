@@ -24,16 +24,17 @@
 **Management Round**
 - Based on Favourite Subject
 - DBMS schema for the given scenario.
-- Algortihms implemented  in project .	
+- Algorithms implemented  in project .	
 	
 **HR Round**
 - Personal Interests.
 - Previous companies.
 - Why rejected prev companies
-- Stipend
+- Stipend details
 - Location constraints
 - Subject Details 
-- Availaibility and Personal Constraints. 
+- Availaibility and Personal Constraints.
+- What companies did you attend?
  	
 **Positives**
 - Challenging.
