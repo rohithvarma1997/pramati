@@ -14,7 +14,7 @@
  - Time complexities.
    *We were asked to optimize the solutions which we attemted before.*
 - Scalability of our program.
-   *Ability to change our Hackerrank programs as required.*
+   *Ability to change our Hackerrank programs as required*
 - Few problem solving challenges.
   *How do we approach on solving some realtime scenario.*
 - Basics of DataStructures and DBMS.
@@ -64,6 +64,8 @@
   - Technical logic.
   - Approach to solve a problem.
  - How interest originated in candidate.
+  *What made you join in VIT?*
+  *Why did you join this course?*
 
 **What was in candidate’s mind while giving interview?**
 - Why questions has been stressed more on Mathematics ?
