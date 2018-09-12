@@ -57,9 +57,9 @@ Typical use cases for Informatica can be
 
 **4\. Which tool is being used widely in market**
 
- Informatica is highly specialized in ETL and Data integration. It’s the
+- Informatica is highly specialized in ETL and Data integration. It’s the
 market leader in ETL domain with 100% deployment rate and 94% customer
 loyalty. It is also easy to learn for any one even with very limited
-knowledge. But, if you want to go for open source and you are familiar
-with Java then go for Talend. It is more affordable than Informatica in
-terms of cost, training and resource allocation
+knowledge.
+- Informatica has a lot of tools that allow you to Extract data from anywhere, transform any kind of data in any manner required & load data to any data point. It has a strong presence when working with Unstructured / Semi-structured as well as structured data, it has versions for Windows, Linux, Unix, Big Data specific OS as well as cloud
+- But, if you want to go for open source and you are familiar with Java then go for Talend. It is more affordable than Informatica in terms of cost, training and resource allocation
