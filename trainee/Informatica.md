@@ -31,14 +31,14 @@ Typical use cases for Informatica can be
 -    Easily expandable
 -    Stable
 -    Supports most of the industry standard data types
--    Supports multiuser client-server development interface
 -    Easy to use and learn
+-    No prior programming knowledge required 
 -    100% deployment rate
 -    92-94% customer loyalty
 -    Most mature ETL product available in the market
 -    Transformations can be effectivelf reused
 -    Backup and recovery can be done through repository manager
--    Automatic Documentation
+-    Automatic Documentation of all the mapping done
 -   database neutral and hence can communicate with any database
 -   the most powerful data transformations tool. It converts one
     application’s data to another’s format
