@@ -1,6 +1,5 @@
 **Informatica power center ETL/data integration tool:**
 
-****
 
 **1.About the tool:**
 
