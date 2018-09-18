@@ -62,6 +62,9 @@ sudo docker images -a : list all images with tag name.
 
 sudo docker ps : list all containers in machine.
 
+docker inspect container1 (to get ip address of the docker container)
+
+
 **To stop and remove docker container:**
 
 - sudo docker stop container1
