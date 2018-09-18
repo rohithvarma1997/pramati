@@ -56,11 +56,11 @@ Now we are able to run docker command without prefix sudo.
 
 **docker commands:**
 
-docker -v : gives docker version
+sudo docker -v : gives docker version
 
-docker images -a : list all images with tag name.
+sudo docker images -a : list all images with tag name.
 
-docker ps : list all containers in machine.
+sudo docker ps : list all containers in machine.
 
 # Installing Postgresql in docker: #
 
@@ -68,7 +68,7 @@ docker ps : list all containers in machine.
 
 - \$ pull postgres image from docker(hub.docker.com).
 
-- \$ docker pull postgres.
+- \$ sudo docker pull postgres.
 
 **Step2:**
 
@@ -81,16 +81,16 @@ by*
 
 - \$ docker run --name container\_name -d Image-name
 
-eg: docker run --name container1 -d postgres.
+eg: sudo docker run --name container1 -d postgres.
 
 **Step3:**
 
-- \$ docker ps : list the containers list and we can able to see our
+- \$ sudo docker ps : list the containers list and we can able to see our
 postgres\_container1 .
 
 **Step4:**
 
-- \$ docker exec -it container\_name bash
+- \$ sudo docker exec -it container1 bash
 
 - psql -U Imagename(postgres)
 
