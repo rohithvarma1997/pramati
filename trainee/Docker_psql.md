@@ -96,12 +96,27 @@ postgres\_container1 .
 
 **psql:**
 
-- create database db\_name;
+- postgres=# CREATE USER rohithv SUPERUSER PASSWORD 'varma'; 
+CREATE ROLE
 
-- create table resume\_collect( id SERIAL primary key , filename
-  varchar not null , email varchar not null ,phone varchar not null
-  ,yop varchar not null);
+- postgres=# CREATE DATABASE resume;
+CREATE DATABASE
+- postgres=# GRANT ALL PRIVILEGES ON DATABASE postgres to rohithv;
+GRANT
 
-- insert into resume\_collect values (\$filename,\$mail,\$mob);
+- postgres=# \c resume
+You are now connected to database "resume" as user "postgres".
+- resume=# create table resume_collect( id SERIAL primary key , filename varchar not null , email varchar not null ,phone varchar not null);CREATE TABLE
+- resume=# select * from resume_collect;
+ id | filename | email | phone 
+----+----------+-------+-------
+(0 rows)
 
+- resume=# insert into resume_collect values (1,'rohithvarma','krohithvarma1997@gmail.com','8328124562');
+INSERT 0 1
+resume=# select * from resume_collect;
+ id |  filename   |           email            |   phone    
+----+-------------+----------------------------+------------
+  1 | rohithvarma | krohithvarma1997@gmail.com | 8328124562
+(1 row)
 
