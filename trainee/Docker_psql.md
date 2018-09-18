@@ -80,7 +80,7 @@ sudo docker ps : list all containers in machine.
 
 *now we can see what are all the images present in our system by using*
 
-- docker images
+- sudo docker images
 
 *we able to see postgres image ,to use postgres create postgres instance
 by*
@@ -105,12 +105,15 @@ CREATE ROLE
 
 - postgres=# CREATE DATABASE resume;
 CREATE DATABASE
+
 - postgres=# GRANT ALL PRIVILEGES ON DATABASE postgres to rohithv;
 GRANT
 
 - postgres=# \c resume
 You are now connected to database "resume" as user "postgres".
+
 - resume=# create table resume_collect( id SERIAL primary key , filename varchar not null , email varchar not null ,phone varchar not null);CREATE TABLE
+
 - resume=# select * from resume_collect;
  id | filename | email | phone 
 ----+----------+-------+-------
