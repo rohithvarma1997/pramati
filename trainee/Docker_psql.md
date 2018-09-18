@@ -62,6 +62,12 @@ sudo docker images -a : list all images with tag name.
 
 sudo docker ps : list all containers in machine.
 
+**To stop and remove docker container:**
+
+- sudo docker stop container1
+
+- sudo docker rm container1
+
 # Installing Postgresql in docker: #
 
 **step1:**
@@ -79,9 +85,7 @@ sudo docker ps : list all containers in machine.
 *we able to see postgres image ,to use postgres create postgres instance
 by*
 
-- \$ docker run --name container\_name -d Image-name
-
-eg: sudo docker run --name container1 -d postgres.
+- sudo docker run --name container1 -d postgres.
 
 **Step3:**
 
@@ -92,7 +96,7 @@ postgres\_container1 .
 
 - \$ sudo docker exec -it container1 bash
 
-- psql -U Imagename(postgres)
+- psql -U postgres
 
 **psql:**
 
