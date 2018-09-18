@@ -106,13 +106,19 @@ CREATE ROLE
 - postgres=# CREATE DATABASE resume;
 CREATE DATABASE
 
-- postgres=# GRANT ALL PRIVILEGES ON DATABASE postgres to rohithv;
+- postgres=# GRANT ALL PRIVILEGES ON DATABASE resume to rohithv;
 GRANT
 
 - postgres=# \c resume
 You are now connected to database "resume" as user "postgres".
 
 - resume=# create table resume_collect( id SERIAL primary key , filename varchar not null , email varchar not null ,phone varchar not null);CREATE TABLE
+
+- resume=# GRANT ALL PRIVILEGES ON TABLE resume_collect to rohithv;
+GRANT
+
+- resume=# GRANT ALL PRIVILEGES ON SEQUENCE resume_collect_id_seq to rohithv;
+GRANT
 
 - resume=# select * from resume_collect;
  id | filename | email | phone 
