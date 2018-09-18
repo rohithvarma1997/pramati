@@ -118,19 +118,19 @@ You are now connected to database "resume" as user "postgres".
 GRANT
 
 - resume=# GRANT ALL PRIVILEGES ON SEQUENCE resume_collect_id_seq to rohithv;
+
 GRANT
 
-- resume=# select * from resume_collect;
- id | filename | email | phone 
-----+----------+-------+-------
-(0 rows)
 
 - resume=# insert into resume_collect values (1,'rohithvarma','krohithvarma1997@gmail.com','8328124562');
+
 INSERT 0 1
 
 - resume=# select * from resume_collect;
+
  id |  filename   |           email            |   phone    
 ----+-------------+----------------------------+------------
   1 | rohithvarma | krohithvarma1997@gmail.com | 8328124562
+  
 (1 row)
 
