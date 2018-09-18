@@ -127,7 +127,8 @@ GRANT
 
 - resume=# insert into resume_collect values (1,'rohithvarma','krohithvarma1997@gmail.com','8328124562');
 INSERT 0 1
-resume=# select * from resume_collect;
+
+- resume=# select * from resume_collect;
  id |  filename   |           email            |   phone    
 ----+-------------+----------------------------+------------
   1 | rohithvarma | krohithvarma1997@gmail.com | 8328124562
