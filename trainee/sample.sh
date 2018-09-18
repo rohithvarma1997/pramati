@@ -11,7 +11,4 @@ echo "Email:$mail"
 echo "Mobile:$mob"
 res=$filename,$mail,$mob
 echo $res
-sudo docker exec -it container1 bash
-psql -U postgress
-psql -c SELECT * FROM resume_collect;
-psql -c commit;
+psql -d resume -U rohithv -h 172.18.0.2 -c 'select * form resume_collect'
