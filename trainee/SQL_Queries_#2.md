@@ -1,4 +1,4 @@
-# SQL Queries: #
+# PSQL Queries: #
 
 **1.Manager Name, Count of Employees whose start date is after 2013**
 
