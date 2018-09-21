@@ -52,7 +52,7 @@ AS
 https://www.postgresql.org/docs/9.1/static/sql-createtable.html
 ```
 
-*6\.add a new column peer_emp_ids array**
+**6\.add a new column peer_emp_ids array**
 ```
 ALTER TABLE employee1 ADD COLUMN peer_emp_ids int[];
 ```
