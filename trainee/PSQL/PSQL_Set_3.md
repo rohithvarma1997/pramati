@@ -10,6 +10,33 @@ SELECT generate_series(
 ) AS MissingID
 EXCEPT SELECT dept_id FROM dept;
 ```
+Without generate series function:
+
+```
+
+WITH RECURSIVE series AS (
+	SELECT
+		1 AS rn
+	UNION ALL
+		SELECT
+			rn + 1 AS rn
+		FROM
+			series
+		WHERE
+			rn < 10
+) SELECT
+	*
+FROM
+	series
+```
+```
+DO $$
+BEGIN
+   FOR i IN (SELECT MIN(dept_id) FROM dept)..(SELECT MAX(dept_id) FROM dept) LOOP
+ insert into miss values (i);
+   END LOOP;
+END; $$ LANGUAGE plpgsql;
+```
 14\.
 
 Manager Name, Reportee who joined first (Reportee Name - doj), Reportee who draws less sal (Reportee Name - salary)
@@ -39,6 +66,34 @@ HAVING min(a_inr.salary)=a.salary
 )b
 ON a.name=b.name;
 ```
+```
+SELECT DISTINCT
+	M . NAME AS mgr_name,
+	FIRST_VALUE (e. NAME) OVER (
+		PARTITION BY M .emp_id
+		ORDER BY
+			e.joining_date
+	) AS first_emp_name,
+	FIRST_VALUE (e.joining_date) OVER (
+		PARTITION BY M .emp_id
+		ORDER BY
+			e.joining_date
+	) AS first_doj,
+	FIRST_VALUE (e. NAME) OVER (
+		PARTITION BY M .emp_id
+		ORDER BY
+			e.salary
+	) AS least_sal_emp_name,
+	FIRST_VALUE (e.salary) OVER (
+		PARTITION BY M .emp_id
+		ORDER BY
+			e.salary
+	) AS least_salary
+FROM
+	employee e
+INNER JOIN employee M ON e.mgr_id = M .emp_id
+
+```      
 16\.
 
 Find the list of employee records where salary data is missing
@@ -74,4 +129,14 @@ WHERE sh.end_date=t.i)
 
 ON b.i-a.i>1;
 ```
-
+```
+select * from (
+SELECT
+	sh.start_date,
+	sh.end_date,
+	LEAD (start_date, 1) OVER (ORDER BY start_date) AS next_start_date
+FROM
+	sh
+ORDER BY
+	start_date)t where next_start_date-end_date > 0
+```
