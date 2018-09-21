@@ -39,4 +39,39 @@ HAVING min(a_inr.salary)=a.salary
 )b
 ON a.name=b.name;
 ```
+16\.
+
+Find the list of employee records where salary data is missing
+
+```
+SELECT CONCAT(a.i,'-',b.i) AS Missing_Data
+FROM
+(
+SELECT i 
+FROM generate_series(
+(SELECT MIN(start_date) 
+FROM sh),
+(SELECT MAX(start_date) 
+FROM sh)) AS t(i)
+WHERE NOT EXISTS(
+SELECT 1 
+FROM sh
+WHERE sh.start_date=t.i)
+) a
+
+INNER JOIN (
+SELECT i 
+FROM generate_series(
+(SELECT MIN(end_date) 
+FROM sh),
+(SELECT MAX(end_date) 
+FROM sh)) AS t(i)
+WHERE NOT EXISTS(
+SELECT 1 
+FROM sh
+WHERE sh.end_date=t.i)
+)b
+
+ON b.i-a.i>1;
+```
 
