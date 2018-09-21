@@ -130,7 +130,7 @@ WHERE sh.end_date=t.i)
 ON b.i-a.i>1;
 ```
 ```
-select * from (
+SELECT * FROM (
 SELECT
 	sh.start_date,
 	sh.end_date,
