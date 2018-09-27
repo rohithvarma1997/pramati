@@ -1,0 +1,96 @@
+<style>
+* {
+    box-sizing: border-box;
+}
+.row_1{
+   height:80px;
+   padding-bottom:10px;
+}
+.top_1
+{
+    float: left;
+    width: 50%;
+    height: 15%;
+}
+.top_2
+{
+    float: left;
+    width: 50%;
+    height: 15%;
+    padding-right:25px;
+}
+.bord1{
+   padding-right:20px;
+   padding-left:20px;
+   border-right:2px solid black;
+}
+.bord2{
+   padding-right:20px;
+   padding-left:20px;
+   border-right:2px solid black;
+}
+.bord3{
+   padding-right:15px;
+   padding-left:20px;
+}
+.banner{
+    height:px;
+    width:100%;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-top:1.7px dashed black;
+    border-bottom:1.7px dashed black;
+}
+.row_2{
+  height: 350px;
+  display: table;
+  border-bottom: 1.7px dashed black;
+  padding-bottom: 2px;
+
+}
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+body{
+   padding-top:10px;
+   
+}
+.midd{
+  padding-top: 15px;
+  padding-bottom: 15px;
+border-bottom:1px dotted black; 
+height: 120px;
+}
+p{
+  font-size:12px;
+  padding: 0;
+  margin: 0;
+}
+h4{
+  padding: 0;
+  margin: 0;
+  color:   #117864 ;
+}
+#htext{
+  display: none;
+}
+.cometo
+{
+  padding: 0;
+  margin: 0;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding-top: 6px; 
+}
+
+
+</style>
