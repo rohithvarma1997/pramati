@@ -18,6 +18,7 @@
       var flag=0;
       var freg=/^[a-zA-Z]{3,20}$/;
       var lreg=/^[a-zA-Z]{3,20}$/;
+      var dobr=document.forms["form1"]["dob"].value;
       var dobreg=new Date();
       var tod=new Date(document.getElementById("dob").value);
       var emailreg=/^[A-Z0-9a-z]+@[A-Za-z0-9]+.[A-Za-z]{2,4}$/;
@@ -36,8 +37,8 @@
           flag=1;
       }
 
-       
-      if (tod > dobreg) {
+
+      if (tod > dobreg ||  dobr=="") {
           document.getElementById("dob_msg").innerHTML="please fill correct the date ";
           flag=1;
       }
@@ -52,7 +53,7 @@
       if (phreg.test(phone) == false) {
         document.getElementById("ph_msg").innerHTML="This is invalid phone number ";
         flag=1;
-          
+
       }
       if(flag==0)
       {
@@ -64,23 +65,30 @@
       var cell3 = row.insertCell(2);
       var cell4 = row.insertCell(3);
       var cell5 = row.insertCell(4);
-      
-      cell1.innerHTML = document.forms["form1"]["First"].value;
-      cell2.innerHTML = document.forms["form1"]["Last"].value;
+
+      var fnn=document.forms["form1"]["First"].value;
+      fnn = fnn[0].toUpperCase() + fnn.substring(1, fnn.length);
+
+      var lnn=document.forms["form1"]["Last"].value;
+      lnn = lnn[0].toUpperCase() + lnn.substring(1, lnn.length);
+
+
+
+      cell1.innerHTML = fnn;
+      cell2.innerHTML = lnn;
       cell3.innerHTML = document.forms["form1"]["dob"].value;
       cell4.innerHTML = document.forms["form1"]["email"].value;
       cell5.innerHTML = document.forms["form1"]["ph"].value;
       document.getElementById("form1").reset();
-     return true;    
+     return true;
     }
   }
 
     $(document).ready(function(){
-    $("#First").keyup(function () {  
-                $('#First').css('textTransform', 'capitalize');  
+    $("#First").keyup(function () {
+                $('#First').css('textTransform', 'capitalize');
             });
-    $("#Last").keyup(function () {  
-                $('#Last').css('textTransform', 'capitalize');  
+    $("#Last").keyup(function () {
+                $('#Last').css('textTransform', 'capitalize');
             });
     });
-
