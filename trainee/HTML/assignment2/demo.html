@@ -1,0 +1,92 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    
+    <script src="sam.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+
+  <div class="container" align="center" id="div_1">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Sample From</div>
+    </div>
+    <div class="panel-body">
+    <form class="form-horizontal" id="form1">
+    <div class="form-group row">
+      <label for="First" class="control-label col-sm-2">First Name</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="First" placeholder="Enter First Name"> </input>
+      </div>
+      <span class="control-label col-sm-3 text-danger" id=fname_msg ></span>
+    </div>
+    <div class="form-group row">
+      <label for="Last" class="control-label col-sm-2">Last Name</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="Last" placeholder="Enter Last Name">
+      </div>
+      <span class="control-label col-sm-3 text-danger" id=lname_msg ></span>
+    </div>
+
+    <div class="form-group row">
+      <label for="dob" class="control-label col-sm-2">Date Of Birth</label>
+      <div class="col-sm-6">
+      
+        <input class="form-control" id="dob">
+
+      </div>
+      <span class="control-label col-sm-3 text-danger" id=dob_msg ></span>
+      
+    </div>
+
+    <div class="form-group row">
+      <label for="email" class="control-label col-sm-2">Email</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="email" placeholder="Enter Email">
+      </div>
+      <span class="control-label col-sm-3 text-danger" id=email_msg></span>
+    </div>
+
+    <div class="form-group row">
+      <label for="ph" class="control-label col-sm-2">Phone Number</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="ph" placeholder="Enter Phone Number">
+      </div>
+      <span class="control-label col-sm-3 text-danger " id=ph_msg></span>
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="validateForm()">Submit</button>
+
+  </form>
+  </div>
+  </div>
+
+  <div>
+
+    <table class="table table-bordered" id="myTable">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>DOB</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+   
+    </table>
+    
+    </div>
+
+
+  </body>
+  </html>
