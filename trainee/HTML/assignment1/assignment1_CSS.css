@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.row_1{
+.header-div{
   height:100px;
   padding-bottom:5px;
   padding-top: 30px;
@@ -10,30 +10,30 @@
   padding-left:  30px;
 
 }
-.top_1
+.top-logo
 {
   float: left;
   width: 50%;
   height: 15%;
 }
-.top_2
+.top-navigator
 {
   float: left;
   width: 50%;
   height: 15%;
   padding-right:25px;
 }
-.bord1{
+.home-saperator{
   padding-right:20px;
   padding-left:20px;
   border-right:1px solid black;
 }
-.bord2{
+.about-saperator{
   padding-right:20px;
   padding-left:20px;
   border-right:1px solid black;
 }
-.bord3{
+.idea-saperator{
   padding-right:20px;
   padding-left:20px;
 }
@@ -47,7 +47,7 @@
   border-top:1px dashed black;
   border-bottom:1px dashed black;
 }
-.row_2{
+.description-div{
   height: 245px;
   display: table;
   border-bottom: 1.7px dashed black;
@@ -65,7 +65,7 @@ a:hover {
   background-color: transparent;
   text-decoration: none;
 }
-.midd{
+.middle{
   padding-top: 20px;
   border-bottom:1px dashed black;
   height: 120px;
@@ -84,12 +84,12 @@ h4{
 #htext{
   display: none;
 }
-.cometo
+.right-logos
 {
   padding:0;
   margin: 0;
 }
-.column1 {
+.html-column {
   float: left;
   width: 33.33%;
   padding-top: 15px;
@@ -98,7 +98,7 @@ h4{
   padding-left: 5px;
 
 }
-.column2 {
+.css-column {
   float: left;
   width: 33.33%;
   padding-top: 15px;
@@ -107,7 +107,7 @@ h4{
   padding-left: 5px;
 
 }
-.column3 {
+.seo-column {
   float: left;
   width: 33.33%;
   padding-top: 5px;
@@ -117,34 +117,34 @@ h4{
 
 }
 
-.last1{
+.bullet-points{
   padding-left: 35px;
 }
 
-.bul{
+.bullet{
   padding-right: 10px;
 }
 
-.para{
+.readmore-para{
   padding-bottom: 5px;
   color: black;
 }
 
-.bott{
+.bottom-nav{
   padding-top: 5px;
   padding-bottom: 2px;;
 }
 
-.bord11{
+.tab-saperator1{
   padding-right:10px;
   border-right:1px solid black;
 }
-.bord22{
+.tab-saperator2{
   padding-right:10px;
   padding-left:10px;
   border-right:1px solid black;
 }
-.bord33{
+.tab-saperator3{
   padding-right:10px;
   padding-left:10px;
 }
