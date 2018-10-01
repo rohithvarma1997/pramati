@@ -49,7 +49,7 @@
   border-bottom:1px dashed black;
 }
 .row_2{
-  height: 250px;
+  height: 245px;
   display: table;
   border-bottom: 1.7px dashed black;
   padding-bottom: 2px;
@@ -119,7 +119,7 @@ h4{
 }
 
 .last1{
-  padding-left: 15px;
+  padding-left: 35px;
 }
 
 .bul{
