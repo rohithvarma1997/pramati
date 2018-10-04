@@ -1,5 +1,9 @@
 $(function() {
-  $("#dob").datepicker();
+  $("#dob").datepicker({
+    format: 'mm-dd-yyyy',
+    endDate: '-1d',
+    autoclose: true
+  })
 });
 
 
@@ -16,43 +20,43 @@ function validateForm() {
   var i = 0;
   var flag = 0;
   //regular expressions for the validation
-  var freg = /^[a-zA-Z]{3,20}$/;
-  var lreg = /^[a-zA-Z]{3,20}$/;
+  var freg = /^[a-zA-Z\s]{3,20}$/;
+  var lreg = /^[a-zA-Z\s]{3,20}$/;
   var dob_given = document.forms["form1"]["dob"].value;
   var dobreg = new Date();
   var tod = new Date(document.getElementById("dob").value);
-  var emailreg = /^[A-Z0-9a-z]+@[A-Za-z0-9]+.[A-Za-z]{2,4}$/;
-  var phreg = /^[6-9]{1}[0-9]{9}$/;
+  var emailreg = /^[A-Za-z0-9][A-Za-z0-9._%+-]{0,63}@(?:[A-Za-z0-9-]{1,5}\.){1,125}[A-Za-z]{2,5}$/;
+  var phreg = /^[+][0-9]{1,2}[6-9]{1}[0-9]{9}$/;
 
   //checking regex and displaying the warnings
   var fn = document.forms["form1"]["First"].value;
   if (freg.test(fn) == false) {
-    document.getElementById("fname_msg").innerHTML = "This is invalid name ";
+    document.getElementById("fname_msg").innerHTML = "Invalid First name ";
     flag = 1;
   }
 
 
   var ln = document.forms["form1"]["Last"].value;
   if (freg.test(ln) == false) {
-    document.getElementById("lname_msg").innerHTML = "This is invalid name ";
+    document.getElementById("lname_msg").innerHTML = "Invalid Last name ";
     flag = 1;
   }
 
 
   if (tod > dobreg || dob_given == "") {
-    document.getElementById("dob_msg").innerHTML = "please fill correct the date ";
+    document.getElementById("dob_msg").innerHTML = "Incorrect date";
     flag = 1;
   }
 
   var em = document.forms["form1"]["email"].value;
   if (emailreg.test(em) == false) {
-    document.getElementById("email_msg").innerHTML = "This is incorrect email ";
+    document.getElementById("email_msg").innerHTML = "Incorrect email ";
     flag = 1;
   }
 
   var phone = document.forms["form1"]["ph"].value;
   if (phreg.test(phone) == false) {
-    document.getElementById("ph_msg").innerHTML = "This is invalid phone number ";
+    document.getElementById("ph_msg").innerHTML = "Invalid phone number ";
     flag = 1;
   }
 
