@@ -92,7 +92,7 @@ $(document).ready(function() {
         checkValidation();
       }
     }
-     });
+  });
 
 //lastname validation
   $("#Last").blur("input",function(){
@@ -125,7 +125,7 @@ $(document).ready(function() {
         checkValidation();
       }
     }
-     });
+  });
 
 //email validation
   $("#email").blur("input",function(){
@@ -158,7 +158,7 @@ $(document).ready(function() {
         checkValidation();
       }
     }
-     });
+  });
 
 //phone number validation
   $("#ph").blur("input",function(){
@@ -191,10 +191,10 @@ $(document).ready(function() {
         checkValidation();
       }
     }
-     });
+  });
 
 //date of birth validation
-  $("#dob").blur("input",function(){
+  $(document).on("change","input#dob",function(){
     var dobval=$("#dob").val();
 
     function msg(body)
@@ -212,7 +212,5 @@ $(document).ready(function() {
         formValid.dob=true;
         checkValidation();
       }
-
      });
-
 });
