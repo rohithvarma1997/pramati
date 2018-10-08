@@ -55,6 +55,9 @@
   padding-top: 8px;
 
 }
+a{
+	color: black;
+}
 a:link {
   color: black;
   background-color: transparent;
