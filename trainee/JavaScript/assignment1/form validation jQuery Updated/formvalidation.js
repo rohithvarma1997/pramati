@@ -21,9 +21,9 @@ function namevalidation()
     if(name.length>=1)
     {
       $(ref).find(f).hide();
-      var namereg=/[^-\s][a-zA-Z_\s-]{2,20}$/;
+      var namereg=/^[^-\s][a-zA-Z_\s-]{2,19}$/;
       if(!namereg.test(name)){
-        $(ref).find(f).text("no special characters and length >3 and <20 ").show();
+        $(ref).find(f).text("no special characters and length between 3-20 characters ").show();
         nameflag=0;
       }
       else{
