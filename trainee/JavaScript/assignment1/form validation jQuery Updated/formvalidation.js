@@ -1,3 +1,8 @@
+//flag variables for the form fields
+var nameflag = 0;
+var emailflag = 0;
+var dobflag = 0;
+var phoneflag = 0;
 //datepicker function
 $(function () {
   $(".dob").datepicker({
@@ -6,16 +11,11 @@ $(function () {
     autoclose: true
   })
 });
-//flag variables for the form fields
-var nameflag = 0;
-var emailflag = 0;
-var dobflag = 0;
-var phoneflag = 0;
 //firstname validation
-function namevalidation() {
+function nameValidation() {
   $(".name").blur("input", function () {
     var name = $(this).val();
-    var ref = $(this).parent().parent();
+    var ref = $(this).parents('.form-group');
     var f = $(".error");
     if (name.length >= 1) {
       $(ref).find(f).hide();
@@ -31,14 +31,14 @@ function namevalidation() {
   });
 }
 //email validation
-function emailvalidation() {
+function emailValidation() {
   $(".email").blur("input", function () {
     var emailval = $(this).val();
-    var ref = $(this).parent().parent();
+    var ref = $(this).parents('.form-group');
     var f = $(".error");
     if (emailval.length > 0) {
       $(ref).find(f).hide();
-      var emailreg = /^[A-Za-z0-9][A-Za-z0-9._%+-]{0,63}@(?:[A-Za-z0-9-]{1,5}\.){1,125}[A-Za-z]{2,5}$/;
+      var emailreg = /^[A-Za-z0-9][A-Za-z0-9._%+-]{0,63}@(?:[A-Za-z0-9-]{1,20}\.){1,125}[A-Za-z]{2,5}$/;
       if (!emailreg.test(emailval)) {
         $(ref).find(f).text("please enter corect email").show();
         emailflag = 0;
@@ -50,14 +50,14 @@ function emailvalidation() {
   });
 }
 //phone number validation
-function phonevalidation() {
+function phoneValidation() {
   $(".ph").blur("input", function () {
     var phval = $(this).val();
-    var ref = $(this).parent().parent();
+    var ref = $(this).parents('.form-group');
     var f = $(".error");
     if (phval.length > 0) {
       $(ref).find(f).hide();
-      var phreg = /^[6-9]{1}[0-9]{9}$/;
+      var phreg = /^(?:[+]+[0-9]{1,2})?[6-9]{1}[0-9]{9}$/;
       if (!phreg.test(phval)) {
         $(ref).find(f).text("invalid phone number").show();
         phoneflag = 0;
@@ -69,10 +69,10 @@ function phonevalidation() {
   });
 }
 //date of birth validation
-function dobvalidation() {
+function dobValidation() {
   $(document).on("change", "input.dob", function () {
     var dobval = $(".dob").val();
-    var ref = $(".dob").parent().parent();
+    var ref = $(".dob").parents('.form-group');
     var f = $(".error");
     var dobreg = /^[0-9]{2}-[0-9]{2}-[0-9]{4}$/;
     if (!dobreg.test(dobval)) {
@@ -85,35 +85,35 @@ function dobvalidation() {
   });
 }
 //function for blank fields
-function blankmsg() {
+function blankMessage() {
   $("input").blur(function () {
     var value = $(this).val();
     if (value.length < 1) {
-      $(this).parent().parent().find($(".error")).text("This field is required").show();
+      $(this).parents('.form-group').find($(".error")).text("This field is required").show();
     } else {
-      $(this).parent().parent().find($(".error")).hide();
+      $(this).parents('.form-group').find($(".error")).hide();
     }
   });
 }
 //function to validatre when submit is pressed
 function finalValidation() {
   if (!nameflag) {
-    var ref = $(".name").parent().parent();
+    var ref = $(".name").parents('.form-group');
     var f = $(".error");
     $(ref).find(f).text("please correct the name").show();
   }
   if (!emailflag) {
-    var ref = $(".email").parent().parent();
+    var ref = $(".email").parents('.form-group');
     var f = $(".error");
     $(ref).find(f).text("invalid email").show();
   }
   if (!dobflag) {
-    var ref = $(".dob").parent().parent();
+    var ref = $(".dob").parents('.form-group');
     var f = $(".error");
     $(ref).find(f).text("invalid dob").show();
   }
   if (!phoneflag) {
-    var ref = $(".ph").parent().parent();
+    var ref = $(".ph").parents('.form-group');
     var f = $(".error");
     $(ref).find(f).text("invalid phone number").show();
   }
@@ -136,11 +136,11 @@ function finalValidation() {
 //ready function to call all functions on page load
 $(document).ready(function () {
   document.getElementById("form1").reset();
-  blankmsg();
-  namevalidation();
-  emailvalidation();
-  phonevalidation();
-  dobvalidation();
+  blankMessage();
+  nameValidation();
+  emailValidation();
+  phoneValidation();
+  dobValidation();
   // To Capitalize first letter while typing
   $(".name").keyup(function () {
     $('.name').css('textTransform', 'capitalize');
