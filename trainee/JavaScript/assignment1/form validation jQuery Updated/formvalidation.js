@@ -57,7 +57,7 @@ function phoneValidation() {
     var f = $(".error");
     if (phval.length > 0) {
       $(ref).find(f).hide();
-      var phreg = /^(?:[+]+[0-9]{1,2})?[6-9]{1}[0-9]{9}$/;
+      var phreg = /^(?:[+][0-9]{1,2})?[6-9]{1}[0-9]{9}$/;
       if (!phreg.test(phval)) {
         $(ref).find(f).text("invalid phone number").show();
         phoneflag = 0;
