@@ -47,7 +47,7 @@ import org.bouncycastle.util.StoreException;
 
 public final class DigitalSignVerify
 {
-    private final SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+    private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
     
     private DigitalSignVerify()
     {
@@ -130,7 +130,7 @@ public final class DigitalSignVerify
                     }
                     if (sig.getSignDate() != null)
                     {
-                        System.out.println("Modified: " + sdf.format(sig.getSignDate().getTime()));
+                        System.out.println("Modified: " + DATE_FORMAT.format(sig.getSignDate().getTime()));
                     }
                     String subFilter = sig.getSubFilter();
                     if (subFilter != null)
@@ -233,6 +233,7 @@ public final class DigitalSignVerify
         Store<X509CertificateHolder> certificatesStore = signedData.getCertificates();
         Collection<SignerInformation> signers = signedData.getSignerInfos().getSigners();
         SignerInformation signerInformation = signers.iterator().next();
+        System.out.println(signerInformation);
         Collection<X509CertificateHolder> matches =
                 certificatesStore.getMatches((Selector<X509CertificateHolder>) signerInformation.getSID());
         X509CertificateHolder certificateHolder = matches.iterator().next();
@@ -342,3 +343,4 @@ public final class DigitalSignVerify
         }
     }
 }
+
