@@ -49,13 +49,14 @@ All the responses will have the json data or the description of what happended
 **Definition**
 - `POST /superheroes`
 
-**Response**
-- `200 OK` on success
-
 **Arguments**
 - `"id":integer` a unique identifier for the superhero
 - `"name":string` name for the superhero
 - `"power":string` power of the superhero 
+
+**Response**
+- `200 OK` on success
+
 ```json
  {
         "id": 6,
@@ -68,13 +69,14 @@ All the responses will have the json data or the description of what happended
 **Definition**
 - `PUT /superheroes`
 
-**Response**
-- `200 OK` on success
-
 **Arguments**
 - `"id":integer` a unique identifier for the superhero
 - `"name":string` name for the superhero
 - `"power":string` power of the superhero 
+
+**Response**
+- `200 OK` on success
+
 ```json
  {
         "id": 6,
