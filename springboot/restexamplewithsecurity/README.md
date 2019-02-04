@@ -7,7 +7,7 @@
 - open the project in Spring Tool Suite (or)
 - run this command in the terminal `mvn spring-boot:run` to run the spring boot application with embedded tomcat server
 - The application will run in `localhost` at port `8080`
-- To stop the server run `mvn -stop`
+- To stop the server run `mvn -stop` or press `control+c`
 
 All the responses will have the json data or the description of what happended
 
