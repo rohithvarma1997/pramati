@@ -3,9 +3,9 @@
 ## Usage:
 All the responses will have the json data or the description of what happended
 
-### List all Superheroes
+### List all Superheroes:
 **Definition**
-`GET /superheroes`
+- `GET /superheroes`
 
 **Response**
 - `200 OK` on success
@@ -24,9 +24,9 @@ All the responses will have the json data or the description of what happended
 ]
 ```
  
-### Deleting all Superheroes
+### Deleting all Superheroes:
 **Definition**
-`DELETE /superheroes`
+- `DELETE /superheroes`
 
 **Response**
 - `200 OK` on success
@@ -45,9 +45,9 @@ All the responses will have the json data or the description of what happended
 ]
 ```
 
-### Adding a new Superhero
+### Adding a new Superhero:
 **Definition**
-`POST /superheroes`
+- `POST /superheroes`
 
 **Response**
 - `200 OK` on success
@@ -64,9 +64,9 @@ All the responses will have the json data or the description of what happended
  }
  ```
 
-### Updating a new Superhero
+### Updating a new Superhero:
 **Definition**
-`PUT /superheroes`
+- `PUT /superheroes`
 
 **Response**
 - `200 OK` on success
@@ -83,9 +83,9 @@ All the responses will have the json data or the description of what happended
  }
  ```
  
-### Lookup a specific Superhero details
+### Lookup a specific Superhero details:
 **Definition**
-`GET /superheroes/<id>`
+- `GET /superheroes/<id>`
 
 **Response**
 - `404 Not Found` if the superhero does not exist
@@ -98,9 +98,9 @@ All the responses will have the json data or the description of what happended
  }
  ```
  
- ### Delete a specific Superhero
+### Delete a specific Superhero:
 **Definition**
-`DELETE /superheroes/<id>`
+- `DELETE /superheroes/<id>`
 
 **Response**
 - `200 OK` on success
