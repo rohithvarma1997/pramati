@@ -1,6 +1,14 @@
 # Superhero Service
 
+##requirement:
+- maven
+
 ## Usage:
+- open the project in Spring Tool Suite (or)
+- run this command in the terminal `mvn spring-boot:run` to run the spring boot application with embedded tomcat server
+- The application will run in `localhost` at port `8080`
+- To stop the server run `mvn -stop`
+
 All the responses will have the json data or the description of what happended
 
 ### List all Superheroes:
