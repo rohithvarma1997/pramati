@@ -6,6 +6,7 @@ All the responses will have the json data or the description of what happended
 ### List all Superheroes
 **Definition**
 `GET /superheroes`
+
 **Response**
 - `200 OK` on success
 ```json
@@ -26,6 +27,7 @@ All the responses will have the json data or the description of what happended
 ### Deleting all Superheroes
 **Definition**
 `DELETE /superheroes`
+
 **Response**
 - `200 OK` on success
 ```json
@@ -46,8 +48,10 @@ All the responses will have the json data or the description of what happended
 ### Adding a new Superhero
 **Definition**
 `POST /superheroes`
+
 **Response**
 - `200 OK` on success
+
 **Arguments**
 - `"id":integer` a unique identifier for the superhero
 - `"name":string` name for the superhero
@@ -63,8 +67,10 @@ All the responses will have the json data or the description of what happended
 ### Updating a new Superhero
 **Definition**
 `PUT /superheroes`
+
 **Response**
 - `200 OK` on success
+
 **Arguments**
 - `"id":integer` a unique identifier for the superhero
 - `"name":string` name for the superhero
@@ -80,6 +86,7 @@ All the responses will have the json data or the description of what happended
 ### Lookup a specific Superhero details
 **Definition**
 `GET /superheroes/<id>`
+
 **Response**
 - `404 Not Found` if the superhero does not exist
 - `200 OK` on success
@@ -94,6 +101,7 @@ All the responses will have the json data or the description of what happended
  ### Delete a specific Superhero
 **Definition**
 `DELETE /superheroes/<id>`
+
 **Response**
 - `200 OK` on success
 ```json
