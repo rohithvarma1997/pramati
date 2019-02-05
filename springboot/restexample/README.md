@@ -2,39 +2,22 @@
 
 ## requirement:
 - maven
+## Authentication credentials:
+- username: `rohith`
+- password: `123456`
 
 ## Usage:
 - open the project in Spring Tool Suite (or)
 - run this command in the terminal `mvn spring-boot:run` to run the spring boot application with embedded tomcat server
 - The application will run in `localhost` at port `8080`
-- To stop the server run `mvn -stop` or press `control+c`
+- Use the credentials to access the endpoints
+- To stop the server run `mvn -stop` or press `control + c` to gracefully exit
 
 All the responses will have the json data or the description of what happended
 
 ### List all Superheroes:
 **Definition**
-- `GET /superheroes`
-
-**Response**
-- `200 OK` on success
-```json
-[
-    {
-        "id": 1,
-        "name": "superman",
-        "power": "strength"
-    },
-    {
-        "id": 2,
-        "name": "batman",
-        "power": "ninja"
-    }
-]
-```
- 
-### Deleting all Superheroes:
-**Definition**
-- `DELETE /superheroes`
+- '*_GET /superheroes_*'
 
 **Response**
 - `200 OK` on success
@@ -55,12 +38,21 @@ All the responses will have the json data or the description of what happended
 
 ### Adding a new Superhero:
 **Definition**
-- `POST /superheroes`
+- '*_POST /superheroes_*'
 
 **Arguments**
 - `"id":integer` a unique identifier for the superhero
 - `"name":string` name for the superhero
 - `"power":string` power of the superhero 
+
+**Example data**
+```json
+ {
+        "id": 6,
+        "name": "birdman",
+        "power": "fly"
+ }
+ ```
 
 **Response**
 - `200 OK` on success
@@ -75,13 +67,22 @@ All the responses will have the json data or the description of what happended
 
 ### Updating a new Superhero:
 **Definition**
-- `PUT /superheroes`
+- '*_PUT /superheroes_*'
 
 **Arguments**
 - `"id":integer` a unique identifier for the superhero
 - `"name":string` name for the superhero
 - `"power":string` power of the superhero 
 
+**Example data**
+```json
+ {
+        "id": 6,
+        "name": "birdman",
+        "power": "fly"
+ }
+ ```
+ 
 **Response**
 - `200 OK` on success
 
@@ -95,7 +96,7 @@ All the responses will have the json data or the description of what happended
  
 ### Lookup a specific Superhero details:
 **Definition**
-- `GET /superheroes/<id>`
+- '*_GET /superheroes/{id}_*'
 
 **Response**
 - `404 Not Found` if the superhero does not exist
@@ -110,7 +111,7 @@ All the responses will have the json data or the description of what happended
  
 ### Delete a specific Superhero:
 **Definition**
-- `DELETE /superheroes/<id>`
+- '*_DELETE /superheroes/{id}_*'
 
 **Response**
 - `200 OK` on success

@@ -17,6 +17,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 
+	//To configure a custom username and password 
 	@Override
 	@Bean
 	protected UserDetailsService userDetailsService() {
@@ -25,6 +26,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 		return new InMemoryUserDetailsManager(users);
 	}
 
+	//To give access to h2 without authentication to make update and delete operations
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http

@@ -22,40 +22,40 @@ public class SuperheroController {
 	@Autowired
 	SuperheroRepo repo;
 
+	//welcome page
 	@RequestMapping("/")
 	public String Home() {
-		return "home.jsp";
+		return "Welcome to superhero api";
 	}
-
+	
+	//To get the list of all superheroes details
 	@GetMapping("/superheroes")
 	public List<Superhero> getSuperheroes() {
 		return repo.findAll();
 	}
-
+    
+	//To update a superhero
 	@PutMapping("/superheroes")
 	public Superhero CreateOrUpdate(@RequestBody Superhero superhero) {
 		repo.save(superhero);
 		System.out.println("updated");
 		return superhero;
 	}
-
+    
+	//To add a superhero
 	@PostMapping(path = "/superheroes")
 	public Superhero addSuperhero(@RequestBody Superhero superhero) {
 		repo.save(superhero);
 		return superhero;
 	}
 
-	@DeleteMapping(path = "/superheroes")
-	public List<Superhero> deleteAllSuperhero() {
-		repo.deleteAll();
-		return repo.findAll();
-	}
-
+	//To look up for a specific superhero details
 	@GetMapping("/superheroes/{id}")
 	public Optional<Superhero> getSuperhero(@PathVariable("id") int id) {
 		return repo.findById(id);
 	}
 
+	//To delete a specific superhero 
 	@DeleteMapping("/superheroes/{id}")
 	public Optional<Superhero> deleteSuperhero(@PathVariable("id") int id) {
 		repo.delete(repo.getOne(id));
