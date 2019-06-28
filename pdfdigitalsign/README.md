@@ -7,6 +7,7 @@ The Digital Signature creation and verification of pdf is done by 'PDFBOX' which
 
 This is a maven project and ```pom.xml``` file contains all the required libraries like pdfbox,bouncycastle etc to perform the operations
 
-
+# Usage:command line args
+> FinalSignature.java [KeyStoreFile KeyStoreFilePIN FileToSign BackgroundImageOfSignature]
 
 
