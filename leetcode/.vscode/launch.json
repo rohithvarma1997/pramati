@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PrintBinary",
+      "request": "launch",
+      "mainClass": "recursion.PrintBinary"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - AddBinary",
+      "request": "launch",
+      "mainClass": "easy.AddBinary"
+    }
+  ]
+}
