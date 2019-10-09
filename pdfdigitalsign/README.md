@@ -10,4 +10,13 @@ This is a maven project and ```pom.xml``` file contains all the required librari
 # Usage:command line args
 > FinalSignature.java [KeyStoreFile KeyStoreFilePIN FileToSign BackgroundImageOfSignature]
 
+`OR`
+
+> mvn exec:java -e -Dexec.mainClass="com.sample.pdfdigitalsign.FinalSignature" -Dexec.args="KeyStoreFile KeyStoreFilePIN FileToSign BackgroundImageOfSignature"
+
+- Example:
+
+> mvn exec:java -e -Dexec.mainClass="com.sample.pdfdigitalsign.FinalSignature" -Dexec.args="/home/krohithvarma/github/pramati/pdfdigitalsign/src/main/java/com/sample/pdfdigitalsign/file.p12 123456 /home/krohithvarma/github/pramati/pdfdigitalsign/src/main/java/com/sample/pdfdigitalsign/bitcoin.pdf /home/krohithvarma/github/pramati/pdfdigitalsign/src/main/java/com/sample/pdfdigitalsign/lol.jpg"
+
+
 
